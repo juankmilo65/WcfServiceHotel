@@ -50,7 +50,7 @@
     <Compile Include="Dtos\ErrorDto.cs" />
     <Compile Include="Interfaces\IHotelReservationInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\HotelReservationService.cs" />
+    <Content Include="Services\HotelReservationService.svc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,6 @@
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\Debug\WcfServiceHotel.dll.config
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\Debug\WcfServiceHotel.dll
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\Debug\WcfServiceHotel.pdb
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Debug\WcfServiceHotel.csprojResolveAssemblyReference.cache
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Debug\WcfServiceHotel.dll
+D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Debug\WcfServiceHotel.pdb
