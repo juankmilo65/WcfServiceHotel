@@ -1,5 +1,0 @@
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfService1\bin\WcfService1.dll.config
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfService1\bin\WcfService1.dll
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfService1\bin\WcfService1.pdb
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfService1\obj\Debug\WcfService1.dll
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfService1\obj\Debug\WcfService1.pdb

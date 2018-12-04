@@ -1,13 +1,1 @@
-﻿using System;
-using WcfServiceHotel.Interfaces;
-
-namespace WcfServiceHotel.Services
-{
-    public class HotelReservationService : IHotelReservationInterface
-    {
-        public string GetXMLInformation()
-        {
-            throw new NotImplementedException();
-        }
-    }
-}
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfService1.Service1" CodeBehind="HotelReservationService.svc.cs" %>

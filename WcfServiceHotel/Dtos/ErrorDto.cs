@@ -18,12 +18,14 @@ namespace WcfServiceHotel.Dtos
             set { errorValue = value; }
         }
 
-        public string Type {
+        public string Type
+        {
             get { return typeValue; }
             set { typeValue = value; }
         }
 
-        public string Code {
+        public string Code
+        {
             get { return codeValue; }
             set { codeValue = value; }
         }

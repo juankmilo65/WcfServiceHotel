@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 using WcfServiceHotel.Dtos;
 
 namespace WcfServiceHotel.DataContracts
@@ -14,7 +13,8 @@ namespace WcfServiceHotel.DataContracts
         List<ErrorDto> errorValue = new List<ErrorDto>();
 
         [DataMember]
-        public List<ErrorDto> Errors {
+        public List<ErrorDto> Errors
+        {
             get { return errorValue; }
             set { errorValue = value; }
         }
