@@ -62,28 +62,115 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Services\HotelReservationService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContracts\ResponseErrorDataContract.cs" />
-    <Compile Include="DataContracts\ResponseSuccessDataContract.cs" />
+    <Compile Include="DataContracts\AcceptedPaymentsTypeAcceptedPayment.cs" />
+    <Compile Include="DataContracts\AdditionalDetailType.cs" />
+    <Compile Include="DataContracts\AddressInfoType.cs" />
+    <Compile Include="DataContracts\AddressType.cs" />
+    <Compile Include="DataContracts\AmountPercentType.cs" />
+    <Compile Include="DataContracts\BasicPropertyInfoType.cs" />
+    <Compile Include="DataContracts\CommentTypeComment.cs" />
+    <Compile Include="DataContracts\CompanyInfoType.cs" />
+    <Compile Include="DataContracts\CompanyInfoTypeAddressInfo.cs" />
+    <Compile Include="DataContracts\CompanyInfoTypeEmail.cs" />
+    <Compile Include="DataContracts\CompanyInfoTypeTelephoneInfo.cs" />
+    <Compile Include="DataContracts\CompanyNameType.cs" />
+    <Compile Include="DataContracts\ContactPersonType.cs" />
+    <Compile Include="DataContracts\ContactPersonTypeTelephone.cs" />
+    <Compile Include="DataContracts\CountryNameType.cs" />
+    <Compile Include="DataContracts\DirectBillType.cs" />
+    <Compile Include="DataContracts\DiscountType.cs" />
+    <Compile Include="DataContracts\EmailType.cs" />
+    <Compile Include="DataContracts\ErrorsType.cs" />
+    <Compile Include="DataContracts\ErrorType.cs" />
+    <Compile Include="DataContracts\FormattedTextTextType.cs" />
+    <Compile Include="DataContracts\FreeTextType.cs" />
+    <Compile Include="DataContracts\GuaranteeType.cs" />
+    <Compile Include="DataContracts\GuaranteeTypeGuaranteeAccepted.cs" />
+    <Compile Include="DataContracts\GuestCountTypeGuestCount.cs" />
+    <Compile Include="DataContracts\HotelReservationsType.cs" />
+    <Compile Include="DataContracts\HotelReservationsTypeHotelReservation.cs" />
+    <Compile Include="DataContracts\HotelReservationType.cs" />
+    <Compile Include="DataContracts\HotelReservationTypeBillingInstructionCode.cs" />
+    <Compile Include="DataContracts\HotelReservationTypeBillingInstructionCodeResGuestRPH.cs" />
+    <Compile Include="DataContracts\HotelReservationTypeResGlobalInfo.cs" />
+    <Compile Include="DataContracts\MembershipTypeMembership.cs" />
+    <Compile Include="DataContracts\OTA_HotelResNotifRQ.cs" />
+    <Compile Include="DataContracts\ParagraphType.cs" />
+    <Compile Include="DataContracts\PaymentCardType.cs" />
+    <Compile Include="DataContracts\PaymentCardTypeCardNumber.cs" />
+    <Compile Include="DataContracts\PaymentFormType.cs" />
+    <Compile Include="DataContracts\PaymentFormTypeVoucher.cs" />
+    <Compile Include="DataContracts\PersonNameType.cs" />
+    <Compile Include="DataContracts\RatePlanInclusionsType.cs" />
+    <Compile Include="DataContracts\RatePlanType.cs" />
+    <Compile Include="DataContracts\RatePlanTypeMealsIncluded.cs" />
+    <Compile Include="DataContracts\RelatedTravelerType.cs" />
+    <Compile Include="DataContracts\ResGuestRPHsTypeResGuestRPH.cs" />
+    <Compile Include="DataContracts\ResGuestType.cs" />
+    <Compile Include="DataContracts\ResGuestTypeProfileInfo.cs" />
+    <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePayment.cs" />
+    <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentAddress.cs" />
+    <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentAmountPercent.cs" />
+    <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentDeadline.cs" />
+    <Compile Include="DataContracts\RESX_HotelReservationType__UniqueID_Type.cs" />
+    <Compile Include="DataContracts\RESX_RequestorID__UniqueID_Type.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__CustomerType.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__CustomerTypeAddress.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__CustomerTypeCustLoyalty.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__CustomerTypeEmail.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__CustomerTypeTelephone.cs" />
+    <Compile Include="DataContracts\RESX_ResGuest__ProfileType.cs" />
+    <Compile Include="DataContracts\RoomStaysTypeRoomStay.cs" />
+    <Compile Include="DataContracts\RoomStayType.cs" />
+    <Compile Include="DataContracts\RoomStayTypeRoomRate.cs" />
+    <Compile Include="DataContracts\RoomStayTypeTimeSpan.cs" />
+    <Compile Include="DataContracts\RoomTypeType.cs" />
+    <Compile Include="DataContracts\ServiceRPHsTypeServiceRPH.cs" />
+    <Compile Include="DataContracts\ServicesType.cs" />
+    <Compile Include="DataContracts\ServicesTypeServiceCategory.cs" />
+    <Compile Include="DataContracts\ServiceType.cs" />
+    <Compile Include="DataContracts\ServiceTypePrice.cs" />
+    <Compile Include="DataContracts\ServiceTypeServiceDetails.cs" />
+    <Compile Include="DataContracts\ServiceTypeServiceDetailsTimeSpan.cs" />
+    <Compile Include="DataContracts\SourceType.cs" />
+    <Compile Include="DataContracts\SourceTypeBookingChannel.cs" />
+    <Compile Include="DataContracts\SourceTypeRequestorID.cs" />
+    <Compile Include="DataContracts\SpecialRequestTypeSpecialRequest.cs" />
+    <Compile Include="DataContracts\StateProvType.cs" />
+    <Compile Include="DataContracts\SuccessType.cs" />
+    <Compile Include="DataContracts\TaxesType.cs" />
+    <Compile Include="DataContracts\TaxType.cs" />
+    <Compile Include="DataContracts\TotalType.cs" />
+    <Compile Include="DataContracts\TransportInfoTypeTransportInfo.cs" />
+    <Compile Include="DataContracts\UniqueID_Type.cs" />
+    <Compile Include="DataContracts\WarningsType.cs" />
+    <Compile Include="DataContracts\WarningType.cs" />
     <Compile Include="Dtos\ErrorDto.cs" />
+    <Compile Include="DataContracts\OTA_HotelResNotifRS.cs" />
     <Compile Include="Services\HotelReservationService.svc.cs">
       <DependentUpon>HotelReservationService.svc</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IHotelReservationInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\GuaranteeTypeGuaranteeType.cs" />
+    <Compile Include="Utilities\HotelResStatusType.cs" />
+    <Compile Include="Utilities\PaymentFormTypePaymentTransactionTypeCode.cs" />
+    <Compile Include="Utilities\PricingType.cs" />
+    <Compile Include="Utilities\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentDeadlineOffsetDropTime.cs" />
+    <Compile Include="Utilities\TimeUnitType.cs" />
+    <Compile Include="Utilities\TransactionStatusType.cs" />
+    <Compile Include="Utilities\XmlToDynamic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
+    <None Include="Properties\PublishProfiles\local.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceHotel.Utilities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceHotel.Utilities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="HotelResStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reserved" />
+      <xs:enumeration value="Noshow" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Inhouse" />
+      <xs:enumeration value="CheckedOut" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="HotelResStatusType" nillable="true" type="tns:HotelResStatusType" />
+  <xs:simpleType name="PaymentFormTypePaymentTransactionTypeCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="charge" />
+      <xs:enumeration value="reserve" />
+      <xs:enumeration value="refund" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PaymentFormTypePaymentTransactionTypeCode" nillable="true" type="tns:PaymentFormTypePaymentTransactionTypeCode" />
+  <xs:simpleType name="RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentDeadlineOffsetDropTime">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BeforeArrival" />
+      <xs:enumeration value="AfterBooking" />
+      <xs:enumeration value="AfterConfirmation" />
+      <xs:enumeration value="AfterArrival" />
+      <xs:enumeration value="AfterDeparture" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentDeadlineOffsetDropTime" nillable="true" type="tns:RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentDeadlineOffsetDropTime" />
+  <xs:simpleType name="TimeUnitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Second" />
+      <xs:enumeration value="FullDuration" />
+      <xs:enumeration value="Minute" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TimeUnitType" nillable="true" type="tns:TimeUnitType" />
+  <xs:simpleType name="GuaranteeTypeGuaranteeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GuaranteeRequired" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="CCDCVoucher" />
+      <xs:enumeration value="Profile" />
+      <xs:enumeration value="Deposit" />
+      <xs:enumeration value="PrePay" />
+      <xs:enumeration value="DepositRequired" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GuaranteeTypeGuaranteeType" nillable="true" type="tns:GuaranteeTypeGuaranteeType" />
+  <xs:simpleType name="PricingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Perstay" />
+      <xs:enumeration value="Perperson" />
+      <xs:enumeration value="Pernight" />
+      <xs:enumeration value="Perpersonpernight" />
+      <xs:enumeration value="Peruse" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PricingType" nillable="true" type="tns:PricingType" />
+  <xs:simpleType name="TransactionStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Committed" />
+      <xs:enumeration value="Ignored" />
+      <xs:enumeration value="OnHold" />
+      <xs:enumeration value="Unsuccessful" />
+      <xs:enumeration value="PendingCancellation" />
+      <xs:enumeration value="PendingPurchase" />
+      <xs:enumeration value="Requested" />
+      <xs:enumeration value="Reserved" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="RequestDenied" />
+      <xs:enumeration value="Ticketed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TransactionStatusType" nillable="true" type="tns:TransactionStatusType" />
+</xs:schema>

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
+using System.IO;
 using System.Text;
+using System.Xml;
+using WcfServiceHotel.DataContracts;
+using WcfServiceHotel.Dtos;
 using WcfServiceHotel.Interfaces;
 
 namespace WcfServiceHotel.Services
@@ -13,9 +13,9 @@ namespace WcfServiceHotel.Services
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class HotelReservationService : IHotelReservationInterface
     {
-        public string GetXMLInformation()
+        public OTA_HotelResNotifRS GetXMLInformation(OTA_HotelResNotifRQ request)
         {
-            throw new NotImplementedException();
+            return new OTA_HotelResNotifRS() { };
         }
     }
 }

@@ -1,0 +1,8 @@
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\bin\Debug\Cliente.exe.config
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\bin\Debug\Cliente.exe
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\bin\Debug\Cliente.pdb
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\obj\Debug\Cliente.csprojResolveAssemblyReference.cache
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\obj\Debug\Cliente.exe
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\obj\Debug\Cliente.pdb
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\bin\Debug\WcfServiceHotel.dll
+D:\Trabajo\webservice chile\WcfServiceHotel\Cliente\bin\Debug\WcfServiceHotel.pdb
