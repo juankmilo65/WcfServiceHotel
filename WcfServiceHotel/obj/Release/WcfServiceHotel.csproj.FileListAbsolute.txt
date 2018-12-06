@@ -1,6 +1,0 @@
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\WcfServiceHotel.dll.config
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\WcfServiceHotel.dll
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\bin\WcfServiceHotel.pdb
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Release\WcfServiceHotel.csprojResolveAssemblyReference.cache
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Release\WcfServiceHotel.dll
-D:\Trabajo\webservice chile\WcfServiceHotel\WcfServiceHotel\obj\Release\WcfServiceHotel.pdb
