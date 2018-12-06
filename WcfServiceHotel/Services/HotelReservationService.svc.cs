@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using System.ServiceModel.Web;
 using System.Text;
 using System.Xml;
 using WcfServiceHotel.DataContracts;
@@ -13,9 +15,24 @@ namespace WcfServiceHotel.Services
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class HotelReservationService : IHotelReservationInterface
     {
-        public OTA_HotelResNotifRS GetXMLInformation(OTA_HotelResNotifRQ request)
+        public object GetXMLInformation(string request)
         {
-            return new OTA_HotelResNotifRS() { };
+            ResponseXml response = new ResponseXml();
+
+            if (string.IsNullOrEmpty(request))
+            {
+                return new WebFaultException(HttpStatusCode.BadRequest);
+            }
+
+            //SetResponseHttpStatus(HttpStatusCode.OK);
+            response.Code = HttpStatusCode.OK.ToString();
+            return response;
+        }
+
+        public void SetResponseHttpStatus(HttpStatusCode statusCode)
+        {
+            var context = WebOperationContext.Current;
+            context.OutgoingResponse.StatusCode = statusCode;
         }
     }
 }

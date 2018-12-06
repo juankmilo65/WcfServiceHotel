@@ -113,6 +113,7 @@
     <Compile Include="DataContracts\ResGuestRPHsTypeResGuestRPH.cs" />
     <Compile Include="DataContracts\ResGuestType.cs" />
     <Compile Include="DataContracts\ResGuestTypeProfileInfo.cs" />
+    <Compile Include="DataContracts\ResponseXml.cs" />
     <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePayment.cs" />
     <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentAddress.cs" />
     <Compile Include="DataContracts\RESX_DepositPayments_RequiredPaymentsTypeGuaranteePaymentAmountPercent.cs" />

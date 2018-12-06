@@ -16,6 +16,6 @@ namespace WcfServiceHotel.Interfaces
     {
         [OperationContract]
         //[WebInvoke(UriTemplate = "XMLRequest", BodyStyle = WebMessageBodyStyle.Bare, RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]
-        OTA_HotelResNotifRS GetXMLInformation(OTA_HotelResNotifRQ request);
+        object GetXMLInformation(string request);
     }
 }

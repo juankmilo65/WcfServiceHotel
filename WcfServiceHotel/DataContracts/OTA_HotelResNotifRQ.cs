@@ -16,14 +16,14 @@ namespace WcfServiceHotel.DataContracts
         private HotelReservationsTypeHotelReservation[] hotelReservationsField;
         private decimal versionField;
         private string echoTokenField;
-        private System.DateTime timeStampField;
+        public System.DateTime timeStampField;
 
         [System.Xml.Serialization.XmlArrayAttribute(Order = 0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("HotelReservation", IsNullable = false)]
         public HotelReservationsTypeHotelReservation[] HotelReservations
         {
-            get{return this.hotelReservationsField;}
-            set{this.hotelReservationsField = value;}
+            get { return this.hotelReservationsField; }
+            set { this.hotelReservationsField = value; }
         }
 
         [XmlAttributeAttribute()]
