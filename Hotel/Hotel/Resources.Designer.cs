@@ -79,6 +79,46 @@ namespace Hotel {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;OTA_HotelResNotifRS xmlns=&quot;http://www.opentravel.org/OTA/2003/05&quot; EchoToken=&quot;{0}&quot; TimeStamp=&quot;{1}&quot; Version=&quot;{2}&quot; ResResponseType=&quot;{3}&quot;&gt;
+        ///   &lt;Success /&gt;
+        ///   &lt;HotelReservations&gt;
+        ///     {4}
+        ///   &lt;/HotelReservations&gt;
+        ///&lt;/OTA_HotelResNotifRS&gt;.
+        /// </summary>
+        internal static string XmlSuccess {
+            get {
+                return ResourceManager.GetString("XmlSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;HotelReservation&gt;
+        ///         &lt;UniqueID Type=&quot;{0}&quot; ID=&quot;{1}&quot; /&gt;
+        ///         &lt;ResGlobalInfo&gt;
+        ///            &lt;HotelReservationIDs&gt;
+        ///           {2}
+        ///            &lt;/HotelReservationIDs&gt;
+        ///         &lt;/ResGlobalInfo&gt;
+        ///      &lt;/HotelReservation&gt;.
+        /// </summary>
+        internal static string XmlSuccessBody {
+            get {
+                return ResourceManager.GetString("XmlSuccessBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;HotelReservationID ResID_Type=&quot;{0}&quot; ResID_Value=&quot;{1}&quot; /&gt;.
+        /// </summary>
+        internal static string XmlSuccessHotelReservation {
+            get {
+                return ResourceManager.GetString("XmlSuccessHotelReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;OTA_HotelResNotifRS xmlns=&quot;http://www.opentravel.org/OTA/2003/05&quot; EchoToken=&quot;{0}&quot; TimeStamp=&quot;{1}&quot; Version=&quot;{2}&quot; ResResponseType=&quot;{3}&quot;&gt;&lt;Success/&gt;&lt;Warnings&gt;{4}&lt;/Warnings&gt;&lt;HotelReservations&gt;{5}&lt;/HotelReservations&gt;&lt;/OTA_HotelResNotifRS&gt;.
         /// </summary>
         internal static string XmlWarning {

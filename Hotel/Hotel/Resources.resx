@@ -123,6 +123,28 @@
   <data name="XmlErrorContent" xml:space="preserve">
     <value>&lt;Error Type="{0}" Code="{1}"&gt;{2}&lt;/Error&gt;</value>
   </data>
+  <data name="XmlSuccess" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;OTA_HotelResNotifRS xmlns="http://www.opentravel.org/OTA/2003/05" EchoToken="{0}" TimeStamp="{1}" Version="{2}" ResResponseType="{3}"&gt;
+   &lt;Success /&gt;
+   &lt;HotelReservations&gt;
+     {4}
+   &lt;/HotelReservations&gt;
+&lt;/OTA_HotelResNotifRS&gt;</value>
+  </data>
+  <data name="XmlSuccessBody" xml:space="preserve">
+    <value>&lt;HotelReservation&gt;
+         &lt;UniqueID Type="{0}" ID="{1}" /&gt;
+         &lt;ResGlobalInfo&gt;
+            &lt;HotelReservationIDs&gt;
+           {2}
+            &lt;/HotelReservationIDs&gt;
+         &lt;/ResGlobalInfo&gt;
+      &lt;/HotelReservation&gt;</value>
+  </data>
+  <data name="XmlSuccessHotelReservation" xml:space="preserve">
+    <value>&lt;HotelReservationID ResID_Type="{0}" ResID_Value="{1}" /&gt;</value>
+  </data>
   <data name="XmlWarning" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;OTA_HotelResNotifRS xmlns="http://www.opentravel.org/OTA/2003/05" EchoToken="{0}" TimeStamp="{1}" Version="{2}" ResResponseType="{3}"&gt;&lt;Success/&gt;&lt;Warnings&gt;{4}&lt;/Warnings&gt;&lt;HotelReservations&gt;{5}&lt;/HotelReservations&gt;&lt;/OTA_HotelResNotifRS&gt;</value>
   </data>

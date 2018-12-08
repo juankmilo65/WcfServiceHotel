@@ -34,11 +34,13 @@ namespace Hotel.Utilities
                 if (XmlIsNull(value, response))
                     return response;
 
-                XmlHaveCorruptContent(value, response);
+                response = XmlHaveCorruptContent(value, response);
                 return response;
             }
             catch (Exception ex)
             {
+
+                //Ejemplo error
                 HeaderResponseDto headerResponse = new HeaderResponseDto
                 {
                     EchoToken = "abc-123",
@@ -83,52 +85,50 @@ namespace Hotel.Utilities
             List<HotelReservationIDDto> HotelReservationIDs = new List<HotelReservationIDDto>();
             bool haveErrorsOrWarnings = false;
 
-
-            int count = 0;
-
             //Ejemplo llamado warning y success
             if (OTA_HotelResNotifRQ.HotelReservations != null)
             {
-                foreach (var hotelReservation in OTA_HotelResNotifRQ.HotelReservations.HotelReservation)
+                headerResponse = new HeaderResponseDto
                 {
-                    if (string.IsNullOrEmpty(hotelReservation.ResGlobalInfo.Total.AmountAfterTax))
+                    EchoToken = "abc-123",
+                    TimeStamp = TimeStamp,
+                    Version = "1.0"
+                };
+
+                HotelReservationIDs.Add(new HotelReservationIDDto
+                {
+                    ResID_Type = "18",
+                    ResID_Value = "82329987"
+                });
+
+                reservationsList.Add(new HotelReservationDto
+                {
+                    UniqueID_Id = "3741",
+                    UniqueID_Type = "14",
+                    HotelReservationIDs = HotelReservationIDs
+                });
+
+
+                if (OTA_HotelResNotifRQ.HotelReservations.HotelReservation.count == null)
+                {
+                    haveErrorsOrWarnings = ReservationValidation(warningsList, haveErrorsOrWarnings, OTA_HotelResNotifRQ.HotelReservations.HotelReservation);
+                }
+                else
+                {
+                    foreach (var hotelReservation in OTA_HotelResNotifRQ.HotelReservations.HotelReservation)
                     {
-                        haveErrorsOrWarnings = true;
-                        headerResponse = new HeaderResponseDto
-                        {
-                            EchoToken = "abc-123",
-                            TimeStamp = TimeStamp,
-                            Version = "1.0"
-                        };
-
-                        warningsList.Add(new WarningsDto
-                        {
-                            Code = "666",
-                            Message = "AmountAfterTax node " + count + " is mandatory.",
-                            RecordID = "BDC-1234567890",
-                            Type = "3"
-                        });
-
-                        HotelReservationIDs.Add(new HotelReservationIDDto
-                        {
-                            ResID_Type = "18",
-                            ResID_Value = "82329987"
-                        });
-
-                        reservationsList.Add(new HotelReservationDto
-                        {
-                            UniqueID_Id = "3741",
-                            UniqueID_Type = "14",
-                            HotelReservationIDs = HotelReservationIDs
-                        });
-
-                        count++;
+                        haveErrorsOrWarnings = ReservationValidation(warningsList, haveErrorsOrWarnings, hotelReservation);
                     }
                 }
 
                 if (haveErrorsOrWarnings)
                 {
                     response = CreateWarningMessages(headerResponse, warningsList, reservationsList, (int)HttpStatusCode.PartialContent);
+                }
+                else
+                {
+                    //ejemplo success
+                    response = CreateSuccessMessages(headerResponse, reservationsList, (int)HttpStatusCode.OK);
                 }
 
                 return response;
@@ -140,6 +140,53 @@ namespace Hotel.Utilities
 
 
             return new Response();
+        }
+
+        private static bool ReservationValidation(List<WarningsDto> warningsList, bool haveErrorsOrWarnings, dynamic hotelReservation)
+        {
+            int count = 0;
+            if (string.IsNullOrEmpty(hotelReservation.ResGlobalInfo.Total.AmountAfterTax))
+            {
+                haveErrorsOrWarnings = true;
+
+
+                warningsList.Add(new WarningsDto
+                {
+                    Code = "666",
+                    Message = "AmountAfterTax node " + count + " is mandatory.",
+                    RecordID = "BDC-1234567890",
+                    Type = "3"
+                });
+
+                count++;
+            }
+
+            return haveErrorsOrWarnings;
+        }
+
+        private Response CreateSuccessMessages(HeaderResponseDto headerResponse, List<HotelReservationDto> reservationsList, int statusCode)
+        {
+            Response response = new Response();
+            string reservations = string.Empty;
+            string hotelReservationIds = string.Empty;
+            string hotelReservations = string.Empty;
+
+
+            foreach (var reservation in reservationsList)
+            {
+                foreach (var hotelReservationId in reservation.HotelReservationIDs)
+                {
+                    hotelReservationIds = hotelReservationIds + string.Format(Resources.XmlSuccessHotelReservation, hotelReservationId.ResID_Type, hotelReservationId.ResID_Value);
+                }
+
+                hotelReservations = hotelReservations + string.Format(Resources.XmlSuccessBody, reservation.UniqueID_Type, reservation.UniqueID_Id, hotelReservationIds);
+                hotelReservationIds = string.Empty;
+            }
+
+            response.Xml = Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format(Resources.XmlSuccess, headerResponse.EchoToken, headerResponse.TimeStamp, headerResponse.Version, headerResponse.ResResponseType, hotelReservations)));
+            response.Code = statusCode;
+
+            return response;
         }
 
         private Response CreateErrorMessages(HeaderResponseDto headerResponse, List<ErrorDto> errorsList, int statusCode)

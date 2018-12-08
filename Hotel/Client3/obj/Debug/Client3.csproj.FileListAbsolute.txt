@@ -4,3 +4,4 @@ D:\Trabajo\webservice chile\Hotel\Client3\bin\Debug\Client3.exe
 D:\Trabajo\webservice chile\Hotel\Client3\bin\Debug\Client3.pdb
 D:\Trabajo\webservice chile\Hotel\Client3\obj\Debug\Client3.exe
 D:\Trabajo\webservice chile\Hotel\Client3\obj\Debug\Client3.pdb
+D:\Trabajo\webservice chile\WcfServiceHotel\Hotel\Client3\bin\Debug\Client3.exe.config
